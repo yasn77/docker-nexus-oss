@@ -1,0 +1,5 @@
+check process nexus-oss with pidfile /opt/nexus/piddir/nexus.pid
+       start program = "/start-nexus.sh start"
+       stop program  = "/start-nexus.sh stop"
+       restart program = "/start-nexus.sh restart"
+       if failed port 8081 then restart
